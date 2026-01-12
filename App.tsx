@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { BLOG_CONTENT } from './data';
 import { MergeSection } from './components/MergeSection';
 import { ConflictStatus, MergeState } from './types';
-import { GitMerge, GitCommit, Play, RotateCcw, CheckCircle2 } from 'lucide-react';
+import { GitMerge, GitCommit, Play, RotateCcw, CheckCircle2, BookOpen, Github } from 'lucide-react';
 import { ConclusionModal } from './components/ConclusionModal';
 
 const App: React.FC = () => {
@@ -113,6 +113,28 @@ const App: React.FC = () => {
                The production branch is strict. Your current logic is fragile. 
                Review the conflicts below and decide: <span className="text-danger">Fragile Patch</span> or <span className="text-success">Hygienic Fix</span>?
              </p>
+             
+             {/* Links to Blog and GitHub */}
+             <div className="flex items-center justify-center gap-4 mt-6">
+               <a 
+                 href="https://dev.to/suckup_de/code-hygiene-is-not-optional-5698"
+                 target="_blank"
+                 rel="noopener noreferrer"
+                 className="flex items-center gap-2 px-4 py-2 bg-surfaceHigh hover:bg-border text-muted hover:text-white rounded-lg transition-all text-sm"
+               >
+                 <BookOpen size={16} />
+                 <span>Read the Article</span>
+               </a>
+               <a 
+                 href="https://github.com/voku/CodeHygiene"
+                 target="_blank"
+                 rel="noopener noreferrer"
+                 className="flex items-center gap-2 px-4 py-2 bg-surfaceHigh hover:bg-border text-muted hover:text-white rounded-lg transition-all text-sm"
+               >
+                 <Github size={16} />
+                 <span>Contribute</span>
+               </a>
+             </div>
           </div>
 
           {/* Merge Stream */}
