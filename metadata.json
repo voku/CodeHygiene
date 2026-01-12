@@ -1,0 +1,5 @@
+{
+  "name": "Code Hygiene Merger",
+  "description": "A gamified merge-tool interface visualizing the contrast between fragile code and hygienic software practices based on the blog post 'Code Hygiene Is Not Optional'.",
+  "requestFramePermissions": []
+}

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Code Hygiene Merger</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Prism CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/line-numbers/prism-line-numbers.min.css" rel="stylesheet" />
+    
+    <!-- Tailwind Configuration -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              mono: ['ui-monospace', 'SFMono-Regular', 'Menlo', 'Monaco', 'Consolas', "Liberation Mono", "Courier New", 'monospace'],
+            },
+            colors: {
+              background: '#09090b', // Zinc 950
+              surface: '#18181b',    // Zinc 900
+              surfaceHigh: '#27272a', // Zinc 800
+              border: '#3f3f46',     // Zinc 700
+              text: '#e4e4e7',       // Zinc 200
+              muted: '#a1a1aa',      // Zinc 400
+              
+              brand: '#3b82f6',      // Blue 500
+              
+              danger: '#ef4444',     // Red 500
+              dangerDim: '#450a0a',  // Red 950
+              
+              success: '#22c55e',    // Green 500
+              successDim: '#052e16', // Green 950
+
+              purple: '#a855f7',
+              purpleDim: '#3b0764'
+            },
+            animation: {
+              fadeIn: 'fadeIn 0.5s ease-out',
+              scaleIn: 'scaleIn 0.3s ease-out',
+              slideUp: 'slideUp 0.4s cubic-bezier(0.16, 1, 0.3, 1)',
+            },
+            keyframes: {
+              fadeIn: {
+                '0%': { opacity: '0' },
+                '100%': { opacity: '1' },
+              },
+              scaleIn: {
+                '0%': { opacity: '0', transform: 'scale(0.95)' },
+                '100%': { opacity: '1', transform: 'scale(1)' },
+              },
+              slideUp: {
+                '0%': { opacity: '0', transform: 'translateY(20px)' },
+                '100%': { opacity: '1', transform: 'translateY(0)' },
+              }
+            }
+          }
+        }
+      }
+    </script>
+    
+    <style>
+      /* Prism Overrides for Cleaner Look */
+      pre[class*="language-"].line-numbers {
+        padding-left: 3.5em !important;
+        background: transparent !important;
+        margin: 0 !important;
+        padding-top: 1.5rem !important;
+        padding-bottom: 1.5rem !important;
+        text-shadow: none !important;
+      }
+      
+      .line-numbers .line-numbers-rows {
+        border-right: 1px solid #3f3f46 !important; /* border color */
+        background-color: transparent !important;
+        padding-top: 1.5rem !important;
+      }
+      
+      .line-numbers-rows > span:before {
+        color: #52525b !important; /* Zinc 600 */
+      }
+      
+      code[class*="language-"], pre[class*="language-"] {
+        text-shadow: none !important;
+        font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !important;
+        font-size: 0.9rem;
+      }
+
+      /* Scrollbar */
+      ::-webkit-scrollbar {
+        width: 8px;
+        height: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: transparent; 
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #3f3f46; 
+        border-radius: 4px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #52525b; 
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@^19.2.3",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "lucide-react": "https://esm.sh/lucide-react@^0.562.0"
+  }
+}
+</script>
+</head>
+  <body class="bg-background text-text antialiased selection:bg-brand selection:text-white">
+    <div id="root"></div>
+    
+    <!-- Prism Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-typescript.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/line-numbers/prism-line-numbers.min.js"></script>
+  </body>
+</html>
